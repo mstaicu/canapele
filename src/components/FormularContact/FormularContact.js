@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import emailConfig from '../../data/Email';
+
 import './FormularContact.scss';
 
 export default class extends Component {
@@ -17,26 +19,25 @@ export default class extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-  async onSubmit(event) {
+  onSubmit(event) {
     event.preventDefault();
 
-    this.setState({
-      buttonText: 'Se trimite..',
-    });
+    var { name, email, message } = this.state;
 
-    var promise = new Promise(function(resolve, reject) {
-      setTimeout(function() {
-        resolve('#done');
-      }, 1000);
-    });
-
-    var response = await promise;
+    Email.send(
+      email,
+      emailConfig.destination,
+      `${name} v-a trimis un mesaj`,
+      message,
+      { token: emailConfig.token },
+    );
 
     this.setState({
-      buttonText: 'Mesajul a fost #trimis 💪🏻',
+      name: '',
+      email: '',
+      message: '',
+      buttonText: 'Mesajul a fost trimis',
     });
-
-    //Do stuff with this.state
   }
 
   onChange(event) {
