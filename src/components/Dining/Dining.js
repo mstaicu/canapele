@@ -1,18 +1,32 @@
 import React from 'react';
 
+import { withRouter } from 'react-router-dom';
+
 import SectionTitle from '../SectionTitle/SectionTitle';
 import Carousel from '../Carousel/Carousel';
 import Image from '../Image/Image';
 
 import './Dining.scss';
 
-export default function({ leftCarouselData, rightCarouselData }) {
+export default withRouter(function({
+  leftCarouselData,
+  rightCarouselData,
+  history,
+}) {
+  var diningCarouselSettings = {
+    onClickItem: onDiningCarouselSlideClick,
+  };
+
+  function onDiningCarouselSlideClick() {
+    history.push('/camera-zi-compozitii');
+  }
+
   return (
     <div className="dining">
       <div className="left">
         <SectionTitle title="Dining" style={{ paddingLeft: '10px' }} />
 
-        <Carousel>
+        <Carousel settings={diningCarouselSettings}>
           {leftCarouselData.map(function(slide) {
             return (
               <div key={slide.id} className="carousel__slide">
@@ -68,4 +82,4 @@ export default function({ leftCarouselData, rightCarouselData }) {
       </div>
     </div>
   );
-}
+});

@@ -32,16 +32,18 @@ export default withRouter(function({ history }) {
     <div>
       <SectionTitle title="Camera de zi" style={{ paddingLeft: '10px' }} />
 
-      <Carousel settings={topCarouselSettings}>
-        {topCarouselSlides.map(function(slide) {
-          return (
-            <div key={slide.id} className="carousel__slide">
-              {/* <img src={slide.image.src} /> */}
-              <Image data={slide} />
-            </div>
-          );
-        })}
-      </Carousel>
+      <div className="top-carousel">
+        <Carousel settings={topCarouselSettings}>
+          {topCarouselSlides.map(function(slide) {
+            return (
+              <div key={slide.id} className="carousel__slide">
+                {/* <img src={slide.image.src} /> */}
+                <Image data={slide} />
+              </div>
+            );
+          })}
+        </Carousel>
+      </div>
 
       <MenuSelector menuItems={menuItems} />
 
