@@ -1,0 +1,33 @@
+.header__button {
+  display: inline-block;
+  vertical-align: middle;
+
+  height: 100%;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: rgb(228, 228, 228);
+  background: rgb(73, 73, 73);
+
+  transition: color .2s, background .2s;
+
+  &--active {
+    background: rgb(228, 228, 228);
+    color: rgb(73, 73, 73);
+  }
+
+  &:hover {
+    background: rgb(228, 228, 228);
+    color: rgb(73, 73, 73);
+
+    cursor: pointer;
+  }
+
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+}

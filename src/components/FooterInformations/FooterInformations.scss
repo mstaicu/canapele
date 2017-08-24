@@ -1,0 +1,38 @@
+.footer__informations {
+  margin-bottom: 25px;
+
+  .left,
+  .right {
+    display: inline-block;
+    width: 50%;
+
+    vertical-align: top;
+  }
+
+  .left {
+    padding-right: 10px;
+  }
+
+  .store {
+    &__label {
+      margin-bottom: 20px;
+    }
+
+    &__schedule,
+    &__phone {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+    }
+
+    /**
+      Clickable phone no
+    */
+    &__phone__no {
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}

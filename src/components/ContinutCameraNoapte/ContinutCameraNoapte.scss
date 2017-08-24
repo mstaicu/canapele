@@ -1,0 +1,49 @@
+.camera-noapte {
+  .saltele {
+    &__title {
+      padding: 25px;
+
+      text-align: center;
+
+      &--top {
+        background: rgb(76, 44, 80);
+        color: #fff;
+      }
+
+      &--bottom {
+        padding-bottom: 0;
+        color: rgb(59, 0, 64);
+      }
+    }
+
+    &__carousel {
+      .carousel .slide img {
+        width: 45%;
+      }
+    }
+
+    &__description {
+      padding: 25px;
+
+      text-align: center;
+    }
+
+    &__bottom {
+      display: flex;
+
+      padding: 30px;
+      justify-content: space-around;
+
+      color: #fff;
+      background: rgb(76, 44, 80);
+
+      .left {
+        width: 40%;
+      }
+
+      .right {
+        width: 60%;
+      }
+    }
+  }
+}

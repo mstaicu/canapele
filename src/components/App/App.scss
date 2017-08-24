@@ -1,0 +1,439 @@
+@import "~normalize.css/normalize.css";
+@import '~react-responsive-carousel/lib/styles/main.css';
+@import '~react-responsive-carousel/lib/styles/carousel.css';
+
+html {
+  box-sizing: border-box;
+
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 100%;
+  font-weight: 100;
+}
+
+h1,
+h2,
+h3,
+h4,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  font-weight: 100;
+}
+
+@media (min-width: 43.75rem) {
+  #app {
+    line-height: 1.375;
+    /* equivalent to 22px */
+  }
+}
+
+#app {
+  font-size: 1rem;
+  /* equivalent to 16px */
+  line-height: 1.25;
+  /* equivalent to 20px */
+
+  h1 {
+    font-size: 2rem;
+    /* 2x body copy size = 32px */
+    line-height: 1.25;
+    /* 45px / 36px */
+  }
+
+  h2 {
+    font-size: 1.625rem;
+    /* 1.625x body copy size = 26px */
+    line-height: 1.15384615;
+    /* 30px / 26px */
+  }
+
+  h3 {
+    font-size: 1.375rem;
+    /* 1.375x body copy size = 22px */
+    line-height: 1.13636364;
+    /* 25px / 22px */
+  }
+
+  h4 {
+    font-size: 1.125em;
+    /* 1.125x body copy size = 18px */
+    line-height: 1.11111111;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  // min-width = 700px
+  @media (min-width: 43.75rem) {
+    h1 {
+      font-size: 2.5rem;
+      /* 2.5x body copy size = 40px */
+      line-height: 1.125;
+    }
+
+    h2 {
+      font-size: 2rem;
+      /* 2x body copy size = 32px */
+      line-height: 1.25;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      /* 1.5x body copy size = 24px */
+      line-height: 1.25;
+    }
+
+    h4 {
+      line-height: 1.22222222;
+      /* (22px / 18px */
+    }
+  }
+
+  // min-width = 900px
+  @media (min-width: 56.25rem) {
+    h1 {
+      font-size: 2rem;
+      /* 2x body copy size = 32px */
+      line-height: 1.05;
+      /* keep to a multiple of the 20px line height
+    and something more appropriate for display headings */
+    }
+
+    h2 {
+      font-size: 2rem;
+      /* 2x body copy size = 32px */
+      line-height: 1.25;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+      /* 1.75x body copy size = 28px */
+      line-height: 1.25;
+    }
+  }
+
+  /**
+    Portrait mode, mobile devices
+  */
+  @media (max-width: 414px) {
+    .pin {
+      width: 150px;
+    }
+
+    .pin__icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    .banner__info {
+      width: 100%;
+    }
+
+    .banner__title {
+      font-size: 1.4rem;
+    }
+
+    .banner__description {
+      font-size: 0.9rem;
+    }
+
+    .banner__button {
+      font-size: 0.8rem;
+      padding: 10px 15px;
+    }
+
+    .menu-selector {
+      .top,
+      .bottom {
+        height: 300px;
+      }
+
+      .top {
+        .left {
+          display: none;
+        }
+
+        .right {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .bottom {
+        .left {
+          display: block;
+          width: 100%;
+        }
+
+        .right {
+          display: none;
+        }
+      }
+
+      .center {
+        top: calc(100% - 370px);
+
+        &__button {
+          font-size: 0.8rem;
+        }
+
+        // &__image {
+        //   height: calc(100% - 180px);
+        // }
+      }
+    }
+
+    .menu-selector-dormitor {
+      .top,
+      .bottom {
+        height: 300px;
+      }
+
+      .top {
+        .left {
+          display: block;
+          width: 100%;
+        }
+
+        .right {
+          display: none;
+        }
+      }
+
+      .center {
+        top: calc(100% - 370px);
+
+        &__button {
+          font-size: 0.8rem;
+        }
+
+        // &__image {
+        //   height: calc(100% - 180px);
+        // }
+      }
+    }
+
+    .dining {
+      .left,
+      .right {
+        display: block;
+        width: 100%;
+
+        padding: 0;
+      }
+    }
+
+    .footer__informations {
+      .left,
+      .right {
+        display: block;
+        width: 100%;
+
+        padding: 0;
+      }
+
+      .left {
+        margin-bottom: 20px;
+      }
+    }
+
+    .camera-noapte {
+      .saltele__bottom {
+        display: block;
+
+        .left,
+        .right {
+          width: 100%;
+        }
+
+        .left {
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    .pin__icon {
+      width: 16px;
+      height: 16px;
+
+      &:after {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    .pin__box {
+      width: 80px;
+      padding: 5px;
+    }
+
+    .pin__box__title {
+      font-size: 0.7rem;
+      margin: 5px 0;
+    }
+
+    .pin__box__description {
+      font-size: 0.7rem;
+    }
+
+    .image__title {
+      font-size: 1rem;
+    }
+
+    .image__description {
+      font-size: 0.8rem;
+    }
+  }
+
+  /**
+    Landscape mode, mobile devices
+  */
+  @media (min-width: 533px) and (max-width: 736px) {
+    .pin {
+      width: 150px;
+    }
+
+    .pin__icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    .header {
+      &__button {
+        font-size: 0.75rem;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+      }
+    }
+
+    .menu-selector,
+    .menu-selector-dormitor {
+      .top,
+      .bottom {
+        height: 350px;
+      }
+
+      .center {
+        top: calc(100% - 450px);
+        // &__image {
+        //   height: calc(100% - 100px);
+        // }
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+    }
+
+    .footer__informations {
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .image__title {
+      font-size: 1.2rem;
+    }
+
+    .image__description {
+      font-size: 1rem;
+    }
+  }
+
+  /**
+    Tablets
+  */
+  @media (min-width: 768px) and (max-width: 1366px) {
+    .pin {
+      width: 150px;
+    }
+
+    .pin__icon {
+      width: 35px;
+      height: 35px;
+    }
+
+    .header {
+      &__button {
+        font-size: 1.1rem;
+      }
+
+      .logo {
+        font-size: 2rem;
+      }
+    }
+
+    .menu-selector,
+    .menu-selector-dormitor {
+      .top,
+      .bottom {
+        height: 350px;
+      }
+
+      .center {
+        top: calc(100% - 500px);
+
+        &__button {
+          font-size: 1.5rem;
+        }
+      }
+
+      p {
+        font-size: 1.3rem;
+      }
+    }
+
+    .footer__informations {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  /**
+    Laptops, desktops
+  */
+  @media (min-width: 1024px) {
+    .pin__icon {
+      width: 35px;
+      height: 35px;
+    }
+
+    .pin {
+      width: 150px;
+    }
+
+    .header {
+      &__button {
+        font-size: 1.4rem;
+      }
+    }
+
+    .menu-selector,
+    .menu-selector-dormitor {
+      .center {
+        &__button {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

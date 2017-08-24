@@ -1,0 +1,18 @@
+.dining {
+  .left,
+  .right {
+    .info {
+      padding: 20px;
+
+      &__description {
+      }
+    }
+  }
+
+  .left {
+    .info {
+      background: rgb(202, 152, 106);
+      color: #fff;
+    }
+  }
+}

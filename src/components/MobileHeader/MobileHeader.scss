@@ -1,0 +1,42 @@
+.mobile-header {
+  height: 50px;
+
+  position: relative;
+
+  color: #fff;
+  background: #515151;
+
+  &__logo {
+    position: absolute;
+    top: 5px;
+    left: 60px;
+  }
+
+  .bm-overlay,
+  .bm-menu-wrap {
+    top: 0 !important;
+  }
+
+  &__menu {
+    z-index: 3 !important;
+
+    .buttons {
+      height: 50px;
+
+      .header__button {
+        display: block;
+        width: 100%;
+
+        background: transparent;
+        color: rgba(255, 255, 255, 0.5);
+        &--active {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .bm-burger-bars {
+    opacity: 1 !important;
+  }
+}

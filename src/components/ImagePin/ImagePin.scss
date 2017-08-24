@@ -1,0 +1,55 @@
+.pin {
+  position: absolute;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgb(254, 232, 52);
+    background: transparent;
+
+    &:after {
+      content: '';
+      display: block;
+
+      width: 50%;
+      height: 50%;
+
+      border-radius: 50%;
+
+      background: rgb(254, 232, 52);
+    }
+  }
+
+  &__box {
+    padding: 10px;
+
+    position: absolute;
+    top: 0;
+
+    visibility: hidden;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    & > &__title {
+      margin: 10px 0;
+      word-wrap: break-word;
+    }
+
+    &__image {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .pin__box.pin__box--visible {
+    visibility: visible;
+  }
+}
