@@ -27,15 +27,17 @@ export default withRouter(function({ history }) {
         style={{ paddingLeft: '10px', backgroundColor: 'rgb(51, 51, 51)' }}
       />
 
-      <Carousel settings={topCarouselSettings}>
-        {topCarouselSlides.map(function(slide) {
-          return (
-            <div key={slide.id} className="carousel__slide">
-              <Image data={slide} />
-            </div>
-          );
-        })}
-      </Carousel>
+      <div className="top-carousel">
+        <Carousel settings={topCarouselSettings}>
+          {topCarouselSlides.map(function(slide) {
+            return (
+              <div key={slide.id} className="carousel__slide">
+                <Image data={slide} />
+              </div>
+            );
+          })}
+        </Carousel>
+      </div>
 
       <MenuSelectorDormitor menuItems={menuItems} />
 
